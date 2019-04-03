@@ -1,4 +1,3 @@
-
 /*
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
@@ -19,5 +18,6 @@
 package org.apache.dubbo.samples.api;
 
 public interface GreetingsService {
-    String sayHello(String name);
+
+    String sayHi(String name);
 }

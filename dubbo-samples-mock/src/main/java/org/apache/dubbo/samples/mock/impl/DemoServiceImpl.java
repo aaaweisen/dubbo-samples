@@ -19,11 +19,12 @@ package org.apache.dubbo.samples.mock.impl;
 
 import org.apache.dubbo.samples.mock.api.DemoService;
 
-public class DemoServiceImpl implements DemoService{
+public class DemoServiceImpl implements DemoService {
 
     public String sayHello(String name) {
         try {
-            Thread.sleep(5000);  // sleep 5 seconds throws TimeoutException, and mock Impl will be called
+            // sleeping 5 seconds leads to TimeoutException on client side, and mock impl will be invoked
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
